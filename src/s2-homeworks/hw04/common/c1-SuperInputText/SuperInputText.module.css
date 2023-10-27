@@ -11,10 +11,12 @@
 }
 
 .errorInput {
+    border-color: crimson ;
 }
 
 .errorInput:focus {
 }
 
 .error {
+    color: crimson;
 }

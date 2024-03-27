@@ -1,26 +1,29 @@
-import React from 'react'
-import Affair from './affair/Affair'
-import {AffairType, FilterType} from '../HW2'
+import { AffairType, FilterType } from '../HW2'
 import s from './Affairs.module.css'
+import Affair from './affair/Affair'
 
 type AffairsPropsType = {
-    data: any // need to fix any
-    setFilter: any
-    deleteAffairCallback: any
+    data: AffairType[] // need to fix any
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (_id: number) => void
     filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
     const setAll = () => {
+        props.setFilter('all')
         // need to fix
     }
     const setHigh = () => {
         // need to fix
+        props.setFilter('high')
     }
     const setMiddle = () => {
+        props.setFilter('middle')
         // need to fix
     }
     const setLow = () => {
+        props.setFilter('low')
         // need to fix
     }
 
